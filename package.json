@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "index.js"
+    "start": "index.js",
+    "build": "cd client && ng build --prod && cd.. && node index.js"
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",

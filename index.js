@@ -9,7 +9,6 @@ const path = require('path');
 const authentication = require('./routes/authentication')(router);
 const blogs = require('./routes/blogs')(router);
 const bodyParser = require('body-parser');
-const cors = require('cors');
 const port = process.env.PORT || 8080;
 
 
@@ -22,7 +21,6 @@ mongoose.connect(config.uri, {
         console.log('Connected to ' + config.db);
     }
 });
-app.use(cors({ origin: 'http://localhost:4200' }));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/public'));
