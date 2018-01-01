@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "index.js",
+    "start": "node index.js",
     "build": "cd client && ng build --prod && cd.. && node index.js"
   },
   "dependencies": {
