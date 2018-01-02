@@ -112,7 +112,7 @@ module.exports = (router) => {
                             if (!validPassword) {
                                 res.json({ success: false, message: 'Password invalid' });
                             } else {
-                                const token = jwt.sign({ userId: user._id }, config.secret, { expiresIn: '1s' });
+                                const token = jwt.sign({ userId: user._id }, config.secret, { expiresIn: '48h' });
                                 res.json({
                                     success: true,
                                     message: 'Success!',
