@@ -70,13 +70,9 @@
         <span *ngFor="let disliker of blog.dislikedBy"> <a [routerLink]="['/user/', disliker]">{{ disliker }}</a></span>
       </div>
       <!-- Edit Button -->
-      <a [routerLink]="['/edit-blog/', blog._id]" *ngIf="username === blog.createdBy">
-        <button type="button" name="button" class="btn btn-sm btn-default">Edit</button>
-      </a>
+      <a [routerLink]="['/edit-blog/', blog._id]" *ngIf="username === blog.createdBy" name="button" class="btn btn-sm btn-default">Edit</a>
       <!-- Delete Button -->
-      <a [routerLink]="['/delete-blog/', blog._id]" *ngIf="username === blog.createdBy">
-        <button type="button" name="button" class="btn btn-sm btn-danger">Delete</button>
-      </a>
+      <a [routerLink]="['/delete-blog/', blog._id]" *ngIf="username === blog.createdBy" name="button" class="btn btn-sm btn-danger">Delete</a>
       <!-- Likes Dropdown  -->
       <div class="dropdown">
         <!-- Like Button -->
