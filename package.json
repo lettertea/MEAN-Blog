@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node index.js",
-    "build": "cd client && ng build --prod && cd.. && node index.js"
+    "build": "cd client && ng build --prod"
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
