@@ -76,7 +76,7 @@
       <!-- Likes Dropdown  -->
       <div class="dropdown">
         <!-- Like Button -->
-        <button *ngIf="username !== blog.createdBy" type="button" name="button" [ngClass]="blog.likedBy.indexOf(username)? 'btn btn-sm btn-default' : 'btn btn-sm btn-primary'" (click)="likeBlog(blog._id)"><span class="glyphicon glyphicon-thumbs-up">&nbsp;</span>Likes: {{ blog.likes }}</button>
+        <button *ngIf="username !== blog.createdBy" type="button" name="button" [ngClass]="blog.likedBy.includes(username)? 'btn btn-sm btn-primary' : 'btn btn-sm btn-default'" (click)="likeBlog(blog._id)"><span class="glyphicon glyphicon-thumbs-up">&nbsp;</span>Likes: {{ blog.likes }}</button>
         <!-- Dropdown Menu Items -->
         <div class="dropdown-content">
           <a [routerLink]="['/user/', liker]" *ngFor="let liker of blog.likedBy">{{ liker }}</a>
@@ -85,7 +85,7 @@
       <!-- Dislikes Dropdown  -->
       <div class="dropdown">
         <!-- Dislike Button -->
-        <button *ngIf="username !== blog.createdBy" [ngClass]="blog.dislikedBy.indexOf(username)? 'btn btn-sm btn-default' : 'btn btn-sm btn-danger'" type="button" name="button" (click)="dislikeBlog(blog._id)"><span class="glyphicon glyphicon-thumbs-down">&nbsp;</span>Dislikes: {{ blog.dislikes }}</button>
+        <button *ngIf="username !== blog.createdBy" [ngClass]="blog.dislikedBy.includes(username)? 'btn btn-sm btn-danger' : 'btn btn-sm btn-default'" type="button" name="button" (click)="dislikeBlog(blog._id)"><span class="glyphicon glyphicon-thumbs-down">&nbsp;</span>Dislikes: {{ blog.dislikes }}</button>
         <!-- Dropdown Menu Items -->
         <div class="dropdown-content">
           <a [routerLink]="['/user/', disliker]" *ngFor="let disliker of blog.dislikedBy">{{ disliker }}</a>
