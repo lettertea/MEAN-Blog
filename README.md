@@ -1,4 +1,5 @@
 # MEAN-Blog
+Based off of David Acosta's [code](https://github.com/gugui3z24/MEAN-Stack-With-Angular-2-Tutorial/tree/master).
 Live demo [here](https://mean-blogs.herokuapp.com).
 
 Using the MEAN stack, this application attempts to recreate a social media platform. Once registered and logged in, the user may view their own profile with their blogs, other user profiles, or the public blog feed with all blogs. Each blog includes likes, dislikes, and comments functionalities.
